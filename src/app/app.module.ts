@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PagesModule } from './pages/pages.module';
+
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, PagesModule],
+  imports: [BrowserModule, AppRoutingModule, PagesModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
