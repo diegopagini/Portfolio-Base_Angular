@@ -1,1 +1,15 @@
-<p>search works!</p>
+<div
+  *ngIf="!productosService.cargado"
+  class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4 animated fadeIn"
+>
+  <a
+    *ngFor="let product of productosService.productoFiltrado"
+    [routerLink]="['/product', product.cod]"
+    class="rk-item ae-masonry__item"
+    ><img src="assets/productos/{{ product.url }}.jpg" [alt]="product.titulo" />
+    <div [routerLink]="['/product', product.cod]" class="item-meta">
+      <h2>{{ product.titulo }}</h2>
+      <p>{{ product.categoria }}</p>
+    </div>
+  </a>
+</div>
