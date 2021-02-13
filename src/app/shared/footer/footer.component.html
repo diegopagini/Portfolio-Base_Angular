@@ -18,21 +18,21 @@
     <div class="ae-grid__item item-lg-4 au-xs-ta-center">
       <a
         target="_blank"
-        [href]="_infoPaginaService.info.facebook"
+        [href]="_infoPaginaService.info?.facebook"
         class="rk-social-btn"
       >
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg></a
       ><a
         target="_blank"
-        [href]="_infoPaginaService.info.twitter"
+        [href]="_infoPaginaService.info?.twitter"
         class="rk-social-btn"
       >
         <svg>
           <use xlink:href="assets/img/symbols.svg#icon-twitter"></use></svg></a
       ><a
         target="_blank"
-        [href]="_infoPaginaService.info.instagram"
+        [href]="_infoPaginaService.info?.instagram"
         class="rk-social-btn"
       >
         <svg>
@@ -41,7 +41,7 @@
           ></use></svg></a
       ><a
         target="_blank"
-        [href]="_infoPaginaService.info.tublr"
+        [href]="_infoPaginaService.info?.tublr"
         class="rk-social-btn"
       >
         <svg>
@@ -54,9 +54,9 @@
         ><span class="ae-u-bolder">
           <a
             target="_blank"
-            href="mailTo:{{ _infoPaginaService.info.email }}"
+            href="mailTo:{{ _infoPaginaService.info?.email }}"
             class="rk-dark-color"
-            >{{ _infoPaginaService.info.email }}
+            >{{ _infoPaginaService.info?.email }}
           </a></span
         >
       </p>

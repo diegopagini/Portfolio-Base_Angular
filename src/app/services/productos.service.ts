@@ -19,9 +19,16 @@ export class ProductosService {
         'https://portfolio-angular-fe6d0-default-rtdb.firebaseio.com/productos_idx.json'
       )
       .subscribe((resp: Product[]) => {
-        console.log(resp);
         this.productos = resp;
-        this.cargado = false;
+        setTimeout(() => {
+          this.cargado = false;
+        }, 1500);
       });
+  }
+
+  getProducto(id: string) {
+    return this.http.get(
+      `https://portfolio-angular-fe6d0-default-rtdb.firebaseio.com/productos/${id}.json`
+    );
   }
 }
