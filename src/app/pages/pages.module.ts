@@ -4,9 +4,10 @@ import { ProductModule } from './product/product.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { AboutModule } from './about/about.module';
 import { RouterModule } from '@angular/router';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [SearchComponent],
   imports: [
     CommonModule,
     ProductModule,

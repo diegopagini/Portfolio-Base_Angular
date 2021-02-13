@@ -28,10 +28,12 @@
           <a routerLink="about" class="rk-menu__link">About</a>
         </li>
       </ul>
-      <form class="rk-search">
+      <div class="rk-search">
         <input
           type="text"
-          placeholder="Search"
+          (keyup.enter)="buscarProducto(txtBuscar.value)"
+          #txtBuscar
+          placeholder="Buscar..."
           id="urku-search"
           class="rk-search-field"
         />
@@ -40,7 +42,7 @@
             <use xlink:href="assets/img/symbols.svg#icon-search"></use>
           </svg>
         </label>
-      </form>
+      </div>
     </nav>
   </div>
 </header>
